@@ -56,8 +56,10 @@ Optional additions: 0-9 and special characters
    Vite (for development)
 
    Tailwind CSS (for styling)
+   
+## Project Sc
 
-<img src="D:\OneDrive\Pictures\Screenshots\project-sc.png" alt="Project-Sc">
+<img src="https://github.com/falgune2701/React-PasswordGenerator-App/blob/main/project-sc.png" alt="Project-Sc">
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
