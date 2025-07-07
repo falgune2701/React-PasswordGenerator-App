@@ -6,8 +6,10 @@ function App() {
   const [numberAllowed, setNumberAllwoed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
+
   // used useRef hook
   const passwordRef = useRef(null) 
+  
   // here started passwordGenerator ()
   const passwordGenerator = useCallback( () => {
       let pass = ""
@@ -96,7 +98,11 @@ function App() {
        </div>
      </div>
       <div className='flex justify-center items-center my-6'>
-         <button className=' bg-gray-700 rounded-lg p-3 font-bold text-white hover:text-[#b3b3b3] border-[1px] border-white hover:border-blue-600 shadow-lg ' onClick={passwordGenerator}>Generate Password</button>
+         <button 
+           className=' bg-gray-700 rounded-lg p-3 font-bold text-white hover:text-[#b3b3b3] border-[1px] border-white hover:border-blue-600 shadow-lg ' 
+           onClick={passwordGenerator}>
+           Generate Password
+          </button>
       </div>
     </>
   )
