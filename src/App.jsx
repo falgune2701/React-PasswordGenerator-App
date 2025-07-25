@@ -47,8 +47,8 @@ function App() {
   return (
     <>
      <div className=' w-[420px] mx-auto md:w-[510px] lg:w-[650px] bg-gray-700 rounded-lg  shadow-md px-4 py-6 mt-14'>
-       <h1 className=' text-center text-2xl md:text-3xl text-blue-400'>Password Generator</h1>
-       <div className='flex overflow-hidden justify-center'>
+       <h1 className='text-2xl text-center text-blue-400 md:text-3xl'>Password Generator</h1>
+       <div className='flex justify-center overflow-hidden'>
         <input 
           type="text"
           placeholder='Password'
@@ -63,41 +63,41 @@ function App() {
                   onClick={copyPasswordToClipboard}
                   disabled = {!password}>
                   
-                  { password? (isCopied? 'Copied!' : 'Copy') : 'Copy'}
+                  { password ? (isCopied ? 'Copied!' : 'Copy') : 'Copy'}
               </button>
        </div>
-       <div className=' flex my-4 gap-x-2 md:gap-x-3 lg:gap-x-5 text-sm md:text-lg lg:text-2xl justify-center'>
-         <div className=' flex items-center gap-x-1 lg:gap-x-2 text-orange-700'>
+       <div className='flex justify-center my-4 text-sm gap-x-2 md:gap-x-3 lg:gap-x-5 md:text-lg lg:text-2xl'>
+         <div className='flex items-center text-orange-700 gap-x-1 lg:gap-x-2'>
            <input type="range"
             value={length}
             min={6}
             max={100}
-            className=' cursor-pointer'
+            className='cursor-pointer '
             onChange={(e) => {SetLength(e.target.value)}}
             />
             <label htmlFor="">Length: {length}</label>
           </div>
-          <div className=' flex items-center gap-x-1 lg:gap-x-2 text-orange-700'>
+          <div className='flex items-center text-orange-700 gap-x-1 lg:gap-x-2'>
            <input type="checkbox"
             defaultChecked = {numberAllowed}
             id='numberInput'
-            className=' cursor-pointer'
+            className='cursor-pointer '
             onChange={() => {setNumberAllwoed((previous) => !previous)}}
             />
             <label htmlFor="">Numbers</label>
           </div>
-          <div className=' flex items-center gap-x-1 lg:gap-x-2 text-orange-700'>
+          <div className='flex items-center text-orange-700 gap-x-1 lg:gap-x-2'>
            <input type="checkbox"
             defaultChecked = {charAllowed}
             id='charInput'
-            className=' cursor-pointer'
+            className='cursor-pointer '
             onChange={() => {setCharAllowed((previous) => !previous)}}
             />
             <label htmlFor="">Characters</label>
           </div>
        </div>
      </div>
-      <div className='flex justify-center items-center my-6'>
+      <div className='flex items-center justify-center my-6'>
          <button 
            className=' bg-gray-700 rounded-lg p-3 font-bold text-white hover:text-[#b3b3b3] border-[1px] border-white hover:border-blue-600 shadow-lg ' 
            onClick={passwordGenerator}>
